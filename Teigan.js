@@ -49,7 +49,7 @@ function calculateResults(type) {
     const memorizedNoRecitation = (parseInt(row.querySelector('.memorized-no-recitation').value) || 0) * 0.1;
     const memorizedWithRecitation = (parseInt(row.querySelector('.memorized-with-recitation').value) || 0) * 0.5;
     const result = corrections + wordOpenings + verseOpenings + memorizedNoRecitation + memorizedWithRecitation;
-    row.querySelector('.result').textContent = -result;
+    row.querySelector('.result').textContent = -result.toFixed(1);
     totalResult += result;
   });
   totalResult = 100 - totalResult
